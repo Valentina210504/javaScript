@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+
+<body>
+    <script>
+        var nombre = "juan";
+        let edad = 15;
+        const pais = "españa"; //es una constante que no cambia a lo largo del codigo
+        console.log(nombre);
+        //variables locales = solo se pueden usar dentro de la funcion.
+        function miFuncion() {
+            var variableLocal = "soy una variable local";
+            console.log(variableLocal);
+        }
+        miFuncion();// esto es para imprimir lo que hay en la funcion
+        //console.log(variableLocal); ---- error xq esta imprimiendo afuera de la funcion
+
+        //variales globales = estan definidas en la parte superior y se puede utilizar dentro de una funcion y afuera
+        var variableGlobal = "soy una variable global";
+        function miFuncion2() {
+            console.log(variableGlobal);
+        }
+        miFuncion2();
+        console.log(variableGlobal);
+
+        // Enunciado: Crea una función llamada myFunction que contenga una variable local
+        // llamada localVar con el valor 20. Dentro de la función, muestra por consola el valor
+        // de una variable global llamada globalVar que tiene el valor 10 y la variable localVar.
+        // Llama a la función myFunction y luego intenta mostrar por consola el valor de
+        // globalVar fuera de la función.Intenta también mostrar por consola el valor de
+        // localVar fuera de la función y observa qué ocurre
+        console.log("Ejercicio 1");
+        var globalVar = 10;
+        function myFunction() {
+            var localVar = 20;
+            console.log(localVar);
+            console.log(globalVar);
+        }
+        myFunction();
+        console.log(globalVar);
+        // console.log(localVar);
+
+        // Enunciado: Declarar dos variables num1 y num2 con valores numéricos. Realizar
+        // las siguientes operaciones:
+        // 1. Sumar num1 y num2.
+        // 2. Multiplicar num1 por num2.
+        // 3. Verificar si num1 es mayor que num2.
+        // 4. Utilizar una variable booleana boolVar con valor true. Luego, realizar la
+        // operación lógica boolVar && (num1 > num2) y almacenar el resultado.
+        // 5. Utilizar el operador ternario para verificar si num1 es mayor que num2. Si es
+        // verdadero, asignar el string "Mayor" a una variable llamada ternaryResult;
+        // de lo contrario, asignar "Menor o igual". Mostrar por consola los resultados
+        // de todas las operaciones.
+        console.log("Ejercicio 2");
+        //punto 1
+        let num1 = 10;
+        let num2 = 8;
+        let resultadoSuma = num1 + num2;
+        console.log(resultadoSuma);
+        //punto 2
+        let resultadoMulti = num1 * num2;
+        console.log(resultadoMulti);
+        //punto 3
+        let mensaje = (num1 > num2) ? "numero 1 es mayor a 2" : "numero 1 es menor a 2";
+        console.log(mensaje);
+        //punto 4
+        Boolean = true;
+        if (Boolean && (num1 > num2)) {
+            console.log(Boolean);
+        } else {
+            Boolean = false;
+            console.log(Boolean);
+        }
+        //punto 5
+        let ternaryResult = (num1 > num2) ? "mayor" : "Menor o igual";
+        console.log(ternaryResult);
+
+        //potenciacion
+        let result_potenciacion = num1 ** num2;
+        console.log(result_potenciacion);
+
+        //operador coma= solo devuelve la ultima expresion
+        let x = (1 + 2, 3 + 4);
+        console.log(x);
+
+
+        // Ejercicio 3: Acceso a Propiedades y typeof
+        // Enunciado: Crear un objeto person con propiedades name, age y city. Mostrar
+        // por consola el valor de la propiedad name del objeto person. Luego, utilizar una
+        // variable property con valor "age" para acceder dinámicamente a la propiedad age
+        // del objeto person y mostrarla por consola. También, mostrar por consola el tipo de
+        // person, el tipo de person.name y el tipo de una variable no definida x.
+        console.log("Ejercicio 3");
+        let person = {
+            name: "juan",
+            age: 6,
+            city: "ocaña",
+        };
+        console.log(person.name);
+        let property = person.age;
+        console.log(property);
+        console.log(typeof person.name);
+        let x;
+        console.log(typeof x);
+
+
+
+    </script>
+</body>
+
+</html>
