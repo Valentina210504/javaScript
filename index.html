@@ -35,7 +35,7 @@
         // Llama a la función myFunction y luego intenta mostrar por consola el valor de
         // globalVar fuera de la función.Intenta también mostrar por consola el valor de
         // localVar fuera de la función y observa qué ocurre
-        console.log("Ejercicio 1");
+        console.log("EJERCICIO 1");
         var globalVar = 10;
         function myFunction() {
             var localVar = 20;
@@ -57,7 +57,7 @@
         // verdadero, asignar el string "Mayor" a una variable llamada ternaryResult;
         // de lo contrario, asignar "Menor o igual". Mostrar por consola los resultados
         // de todas las operaciones.
-        console.log("Ejercicio 2");
+        console.log("EJERCICIO 2");
         //punto 1
         let num1 = 10;
         let num2 = 8;
@@ -96,7 +96,7 @@
         // variable property con valor "age" para acceder dinámicamente a la propiedad age
         // del objeto person y mostrarla por consola. También, mostrar por consola el tipo de
         // person, el tipo de person.name y el tipo de una variable no definida x.
-        console.log("Ejercicio 3");
+        console.log("EJERCICIO 3");
         let person = {
             name: "juan",
             age: 6,
@@ -106,10 +106,84 @@
         let property = person.age;
         console.log(property);
         console.log(typeof person.name);
-        let x;
-        console.log(typeof x);
+        // let x;
+        // console.log(typeof x); no funciona
 
+        // Ejercicio 4: instanceof y Comparación de Tipos
+        // Enunciado: Definir una función constructora Car que tenga propiedades make y
+        // model. Crear un objeto myCar usando Car con valores "Toyota" y "Corolla"
+        // respectivamente. Usar el operador instanceof para verificar si myCar es una
+        // instancia de Car. También, crear un array arr y una variable str con valor "Hola", y
+        // verificar si arr es un array utilizando Array.isArray(arr). Mostrar por consola el tipo
+        // de arr y el tipo de str utilizando typeof.
+        console.log("EJERCICIO 4");
+        function Car(make, model) {
+            this.make = make;
+            this.model = model;
+        }
+        Car();
+        var myCar = new Car("Toyota", "Corolla");
+        console.log(myCar);
+        var instance = myCar instanceof Car;
+        console.log("myCar es una instancia de Car", instance);
 
+        var arr = [];
+        var str = "Hola";
+        var isArray = Array.isArray(arr);
+        console.log("tipo de arr ", typeof arr);
+        console.log("tipo de str ", typeof str);
+
+        // Ejercicio 5: Operadores de Concatenación y Comparación
+        // Enunciado: Crear dos variables firstName y lastName con valores de tu elección.
+        // Concatenar estas dos variables para formar una nueva variable fullName y
+        // mostrarla por consola. Luego, comparar firstName con lastName utilizando los
+        // operadores de comparación (==, ===, !=, !==, <, >, <=, >=) y mostrar los resultados
+        // por consola.
+        console.log("EJERCICIO 5")
+        var firstName = "valentina";
+        var lastName = " prado";
+        var fullName = firstName + lastName;
+        console.log(fullName);
+        console.log(firstName + " ==" + lastName, firstName == lastName); //compara igualdad entre el valor 5 == "5",true
+        console.log(firstName + " ===" + lastName, firstName === lastName); //compara que su valor y tipo (string,int),sean si o si iguales.
+        console.log(firstName + " !=" + lastName, firstName != lastName); // compara diferencia entre el valor
+        console.log(firstName + " !==" + lastName, firstName !== lastName); //compara valor y tipo sean iguales 5!==5,true
+        console.log(firstName + " <" + lastName, firstName < lastName);
+        console.log(firstName + " > " + lastName, firstName > lastName);
+        console.log(firstName + " <=" + lastName, firstName <= lastName);
+        console.log(firstName + " >=" + lastName, firstName >= lastName);
+        //cadenas: Cuando se comparan cadenas de texto, los operadores > y < 
+        //realizan una comparación lexicográfica basada en los valores Unicode de los
+        //caracteres. En otras palabras, compara los caracteres en orden alfabético o
+        //en orden de sus valores Unicode.
+
+        // Ejercicio 6: Operadores de Asignación y Exponenciación
+        // Enunciado: Crear una variable x con un valor numérico. Utilizar los operadores de
+        // asignación (+=, -=, *=, /=) para modificar el valor de x. Luego, utilizar el operador de
+        // exponenciación (**) para elevar x a la potencia de 2 y mostrar el resultado por
+        // consola.
+        console.log("EJERCICIO 6");
+        var numero = 15;
+        console.log(numero += 1);
+        console.log(numero -= 1);
+        console.log(numero *= 2);
+        console.log(numero /= 3);
+        console.log(numero **= 2);
+
+        // Ejercicio 7: Operadores de Coma y Lógicos
+        // Enunciado: Crear una función llamada checkRange que tome un parámetro num.
+        // Dentro de la función, utilizar el operador de coma para combinar múltiples
+        // expresiones. Verificar si num está entre 1 y 10 (inclusive) utilizando los operadores
+        // lógicos && y ||, y mostrar el resultado por consola.
+        console.log("EJERCICIO 7");
+     
+        function checkRange(num){
+            var resulado1 = (num>=1 && num <=10)? true:false;
+            var resulado2 = (num>=1 || num <=10)? true:false;
+            console.log(resulado1);
+            console.log(resulado2);
+        }
+        checkRange(4);
 
     </script>
 </body>
